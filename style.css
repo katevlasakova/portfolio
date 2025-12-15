@@ -1,0 +1,582 @@
+body {
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "ROND" 0;
+  background-color: #12153b;
+  background-image: linear-gradient(
+      to right,
+      rgb(122, 231, 199, 0.2) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgb(122, 231, 199, 0.2) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-attachment: fixed;
+}
+.sekce {
+  min-height: 100vh;
+}
+h1 {
+  font-size: 3.157rem;
+  color: #7ae7c7;
+  margin-bottom: -35px;
+}
+h2 {
+  font-size: 2.369rem;
+  color: #fefefe;
+}
+h3 {
+  font-size: 1.777rem;
+  color: #7ae7c7;
+}
+h4 {
+  font-size: 1.333rem;
+  color: #7ae7c7;
+}
+p {
+  font-size: 1rem;
+  color: #7ae7c7;
+}
+.hero_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-height: 345px;
+}
+.cta {
+  font-family: "doto";
+  font-weight: 900;
+  font-size: 1.333rem;
+  color: rgb(254, 254, 254);
+  background-color: transparent;
+  border-radius: 34px;
+  border: 3px solid #ff00ee;
+  padding: 30px 45px;
+  margin: 50px;
+  transition: background-color 0.3s ease;
+}
+.hero_header a {
+  text-decoration: none;
+}
+.hero_header a:hover {
+  background-color: #ff00ee;
+}
+
+.satelit {
+  max-width: 500px;
+  margin-top: 100px;
+  margin-left: 300px;
+}
+
+.logo1 {
+  max-width: 120px;
+  margin: 50px;
+}
+.hero_title {
+  margin-left: 50px;
+}
+
+.nav_menu {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(122, 231, 199, 0.5);
+  padding: 10px 20px;
+  border-radius: 34px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  gap: 20px;
+  z-index: 9999;
+}
+.nav_menu a {
+  color: #12153b;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+.nav_menu a:hover {
+  color: #ff00ee;
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 5vh;
+  height: 100vh; /* automatická výška podle obsahu */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.bento .prace1 {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+}
+
+.bento .prace2 {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.bento .prace3 {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.box {
+  background-color: rgba(18, 21, 59, 0.5);
+  backdrop-filter: blur(2px);
+  border: solid 1px #7ae7c7;
+  border-radius: 34px;
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-title {
+  color: #7ae7c7;
+  font-size: 1.333rem;
+  margin: 0 0 20px 10px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Kontejner pro obrázky */
+.images-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+}
+
+/* Společné styly obrázků */
+.images-container img {
+  position: absolute;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* ========== LEPORELO (prace1) ========== */
+.prace1 .images-container img.img-1 {
+  width: 60%;
+  top: 2%;
+  right: 0%;
+  z-index: 3;
+}
+
+.prace1 .images-container img.img-2 {
+  width: 60%;
+  bottom: 6%;
+  left: 0%;
+  z-index: 2;
+}
+
+.prace1 .images-container img.img-3 {
+  width: 70%;
+  bottom: -35%;
+  right: 0%;
+  z-index: 1;
+}
+
+/* ========== LOGO (prace2) ========== */
+¨¨ .prace2 .images-container img.startup-logo {
+  width: 10%;
+  top: 15%;
+  left: 0%;
+}
+
+/* ========== BLUDIŠTĚ (prace3) ========== */
+.prace3 .images-container img.img-a {
+  width: 50%;
+  top: 0%;
+  left: 0%;
+  z-index: 2;
+}
+
+.prace3 .images-container img.img-b {
+  width: 55%;
+  top: 9%;
+  right: 0%;
+  z-index: 1;
+}
+.prace3 .project-title {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  z-index: 10;
+  text-align: right;
+}
+
+/*
+.bento-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 5vh;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.bento-about .about1 {
+  grid-row: 1;
+  grid-column: 1;
+  margin-top: 30%;
+  margin-bottom: -10%;
+}
+
+.bento-about .about2 {
+  grid-row: 1;
+  grid-column: 2;
+  margin-top: 10%;
+}
+
+.bento-about .about3 {
+  grid-row: 1;
+  grid-column: 3;
+  margin-top: 20%;
+  margin-bottom: -10%;
+}
+.bento-about .about4 {
+  grid-row: 2;
+  grid-column: 1;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+.bento-about .about5 {
+  grid-row: 2;
+  grid-column: 2;
+  margin-bottom: 30%;
+}
+.bento-about .about6 {
+  grid-row: 2;
+  grid-column: 3;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+.about1 h4,
+.about3 h4,
+.about5 h4 {
+  color: #ff00ee;
+}
+.about2 h4,
+.about4 h4,
+.about6 h4 {
+  color: #fefefe;
+}
+
+.about1 p {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  left: 5%;
+  text-align: left;
+}
+.about1 h4 {
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  left: 5%;
+  text-align: left;
+}
+.about1 img {
+  width: 80%;
+  position: absolute;
+  right: -30%;
+  top: -5%;
+}
+.about2 h4 {
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  left: 5%;
+  text-align: left;
+}
+.about2 .ux1 {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  left: 5%;
+  text-align: left;
+}
+.about2 .ux2 {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  left: 45%;
+  text-align: left;
+}
+.about2 img {
+  width: 70%;
+  position: absolute;
+  top: 23%;
+  left: -8%;
+  text-align: left;
+}
+.about3 p {
+  position: absolute;
+  bottom: 30%;
+  right: 5%;
+  left: 30%;
+  text-align: left;
+}
+.about3 h4 {
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  left: 30%;
+  text-align: left;
+}
+.about3 img {
+  width: 70%;
+  position: absolute;
+  bottom: 5%;
+  right: 30%;
+  left: -15%;
+  text-align: left;
+}
+.about4 p {
+  position: absolute;
+  bottom: 18%;
+  right: 25%;
+  left: 5%;
+  text-align: left;
+}
+.about4 h4 {
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  left: 5%;
+  text-align: left;
+}
+.about4 img {
+  width: 90%;
+  position: absolute;
+  right: -30%;
+  top: 0%;
+}
+.about5 p {
+  position: absolute;
+  bottom: 35%;
+  right: 5%;
+  left: 5%;
+  text-align: left;
+}
+.about5 h4 {
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  left: 5%;
+  text-align: left;
+}
+.about5 img {
+  width: 90%;
+  position: absolute;
+  right: -20%;
+  bottom: -20%;
+}
+.about6 .p1 {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  left: 5%;
+  text-align: left;
+}
+.about6 .p2 {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  left: 45%;
+  text-align: left;
+}
+.about6 h4 {
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  left: 5%;
+  text-align: left;
+}
+.about6 img {
+  width: 70%;
+  position: absolute;
+  bottom: -10%;
+  right: 30%;
+  left: -15%;
+  text-align: left;
+}
+*/
+.bento-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr;
+  grid-template-rows: 2fr 1fr;
+  gap: 5vh;
+  height: 100vh;
+  padding: 20px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.bento-contact .mojefoto {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+}
+
+.bento-contact .formular {
+  grid-row: 1;
+  grid-column: 2 / span 2;
+}
+
+.bento-contact .socialni-site {
+  grid-row: 2;
+  grid-column: 2;
+  min-width: 2fr;
+}
+
+.bento-contact .kontakt-logo {
+  grid-row: 2;
+  grid-column: 3;
+  min-width: 1fr;
+}
+
+.form-title {
+  color: #ff00ee;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: transparent;
+  border: 3px solid #fefefe;
+  border-radius: 34px;
+  padding: 15px;
+  color: #7ae7c7;
+  font-size: 1rem;
+  font-family: "Doto", sans-serif;
+  font-weight: 900;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.submit-btn {
+  background-color: transparent;
+  border: 3px solid #ff00ee;
+  border-radius: 34px;
+  padding: 12px 40px;
+  color: #fefefe;
+  font-size: 1rem;
+  font-family: "Doto";
+  font-weight: 900;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #ff00ee;
+}
+
+.satelit-img {
+  position: absolute;
+  right: 10px;
+  top: 100px;
+  width: 50%;
+}
+.mojefoto h2 {
+  color: #ff00ee;
+}
+.mojefoto h3 {
+  color: #fefefe;
+}
+.mojefoto h4 {
+  color: #ff00ee;
+}
+.mojefoto p {
+  color: #7ae7c7;
+}
+.bento-about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5vh;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+  background: transparent;
+  position: relative;
+  height: 100%;
+}
+
+.box h4 {
+  margin: 15px 0 10px 15px;
+}
+
+.box p,
+.box .ux1,
+.box .ux2,
+.box .p1,
+.box .p2 {
+  margin: 10px 15px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.box img {
+  width: 70%;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.about1 h4,
+.about3 h4,
+.about5 h4 {
+  color: #ff00ee;
+}
+
+.about2 h4,
+.about4 h4,
+.about6 h4 {
+  color: #fefefe;
+}
+
+@media (max-width: 900px) {
+  .bento-about {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .bento-about {
+    grid-template-columns: 1fr;
+  }
+
+  .box img {
+    width: 90%;
+  }
+}
