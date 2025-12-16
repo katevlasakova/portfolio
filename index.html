@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="cs" class="smooth-scroll">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,7 +43,11 @@
           src="images/LOGO KATE.svg"
           alt="gradient logo Kate"
         />
-        <img class="satelit" src="images/satelit.svg" alt="kreslený satelit" />
+        <img
+          class="satelit"
+          src="images/satelit_main.svg"
+          alt="kreslený satelit"
+        />
         <a href="#contact" class="cta">Navázat kontakt</a>
       </div>
       <div class="hero_title">
@@ -196,46 +200,53 @@
         </div>
 
         <div class="box formular">
-          <h3 class="form-title">Napište mi</h3>
+          <h4 class="form-title">Napište mi</h4>
 
-          <form
-            action="https://formsubmit.co/uxui.bykate@gmail.com"
-            method="POST"
-            class="contact-form"
-          >
-            <!-- Skrytá nastavení -->
-            <input
-              type="hidden"
-              name="_subject"
-              value="Nová zpráva z portfolia!"
+          <div class="form-wrapper">
+            <form
+              action="https://formsubmit.co/uxui.bykate@gmail.com"
+              method="POST"
+              class="contact-form"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Nová zpráva z portfolia!"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="text"
+                name="jmeno"
+                placeholder="Vaše jméno"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Váš e-mail"
+                required
+              />
+              <textarea name="zprava" placeholder="Zpráva" required></textarea>
+              <button type="submit" class="submit-btn">ODESLAT</button>
+            </form>
+            <img
+              class="satelit-img"
+              src="images/satelit.svg"
+              alt="kreslený satelit"
             />
-            <input type="hidden" name="_captcha" value="false" />
-
-            <input type="text" name="jmeno" placeholder="Vaše jméno" required />
-            <input
-              type="email"
-              name="email"
-              placeholder="Váš e-mail"
-              required
-            />
-
-            <textarea name="zprava" placeholder="Zpráva" required></textarea>
-
-            <button type="submit" class="submit-btn">ODESLAT</button>
-          </form>
-
-          <img
-            class="satelit-img"
-            src="images/satelit.svg"
-            alt="kreslený satelit"
-          />
+          </div>
         </div>
 
         <div class="box socialni-site">
-          <img src="" alt="" /><img src="" alt="" /><img src="" alt="" />
+          <img src="images/CV icon.svg" alt="ikona životopis" /><img
+            src="images/insta icon.svg"
+            alt="ikona instagram"
+          /><img src="images/linkedin icon.svg" alt="ikona LinkedIn" />
         </div>
 
-        <div class="box kontakt-logo"><img src="" alt="" /></div>
+        <div class="box kontakt-logo">
+          <img src="images/LOGO KATE.svg" alt="logo Kate" />
+        </div>
       </div>
     </section>
   </body>

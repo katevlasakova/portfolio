@@ -212,212 +212,24 @@ p {
   text-align: right;
 }
 
-/*
-.bento-about {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 5vh;
-  height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.bento-about .about1 {
-  grid-row: 1;
-  grid-column: 1;
-  margin-top: 30%;
-  margin-bottom: -10%;
-}
-
-.bento-about .about2 {
-  grid-row: 1;
-  grid-column: 2;
-  margin-top: 10%;
-}
-
-.bento-about .about3 {
-  grid-row: 1;
-  grid-column: 3;
-  margin-top: 20%;
-  margin-bottom: -10%;
-}
-.bento-about .about4 {
-  grid-row: 2;
-  grid-column: 1;
-  margin-bottom: 10%;
-  margin-top: 10%;
-}
-.bento-about .about5 {
-  grid-row: 2;
-  grid-column: 2;
-  margin-bottom: 30%;
-}
-.bento-about .about6 {
-  grid-row: 2;
-  grid-column: 3;
-  margin-bottom: 10%;
-  margin-top: 10%;
-}
-.about1 h4,
-.about3 h4,
-.about5 h4 {
-  color: #ff00ee;
-}
-.about2 h4,
-.about4 h4,
-.about6 h4 {
-  color: #fefefe;
-}
-
-.about1 p {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  left: 5%;
-  text-align: left;
-}
-.about1 h4 {
-  position: absolute;
-  top: 0%;
-  right: 5%;
-  left: 5%;
-  text-align: left;
-}
-.about1 img {
-  width: 80%;
-  position: absolute;
-  right: -30%;
-  top: -5%;
-}
-.about2 h4 {
-  position: absolute;
-  top: 0%;
-  right: 5%;
-  left: 5%;
-  text-align: left;
-}
-.about2 .ux1 {
-  position: absolute;
-  top: 20%;
-  right: 5%;
-  left: 5%;
-  text-align: left;
-}
-.about2 .ux2 {
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
-  left: 45%;
-  text-align: left;
-}
-.about2 img {
-  width: 70%;
-  position: absolute;
-  top: 23%;
-  left: -8%;
-  text-align: left;
-}
-.about3 p {
-  position: absolute;
-  bottom: 30%;
-  right: 5%;
-  left: 30%;
-  text-align: left;
-}
-.about3 h4 {
-  position: absolute;
-  top: 0%;
-  right: 5%;
-  left: 30%;
-  text-align: left;
-}
-.about3 img {
-  width: 70%;
-  position: absolute;
-  bottom: 5%;
-  right: 30%;
-  left: -15%;
-  text-align: left;
-}
-.about4 p {
-  position: absolute;
-  bottom: 18%;
-  right: 25%;
-  left: 5%;
-  text-align: left;
-}
-.about4 h4 {
-  position: absolute;
-  top: 0%;
-  right: 5%;
-  left: 5%;
-  text-align: left;
-}
-.about4 img {
-  width: 90%;
-  position: absolute;
-  right: -30%;
-  top: 0%;
-}
-.about5 p {
-  position: absolute;
-  bottom: 35%;
-  right: 5%;
-  left: 5%;
-  text-align: left;
-}
-.about5 h4 {
-  position: absolute;
-  top: 0%;
-  right: 5%;
-  left: 5%;
-  text-align: left;
-}
-.about5 img {
-  width: 90%;
-  position: absolute;
-  right: -20%;
-  bottom: -20%;
-}
-.about6 .p1 {
-  position: absolute;
-  top: 20%;
-  right: 5%;
-  left: 5%;
-  text-align: left;
-}
-.about6 .p2 {
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
-  left: 45%;
-  text-align: left;
-}
-.about6 h4 {
-  position: absolute;
-  top: 0%;
-  right: 5%;
-  left: 5%;
-  text-align: left;
-}
-.about6 img {
-  width: 70%;
-  position: absolute;
-  bottom: -10%;
-  right: 30%;
-  left: -15%;
-  text-align: left;
-}
-*/
 .bento-contact {
-  display: grid;
+  /*display: grid;
   grid-template-columns: 1fr 1fr 0.5fr;
   grid-template-rows: 2fr 1fr;
   gap: 5vh;
   height: 100vh;
   padding: 20px;
   padding-bottom: 100px;
+  box-sizing: border-box;*/
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-template-rows: 2fr 1fr;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
@@ -442,19 +254,64 @@ p {
   grid-column: 3;
   min-width: 1fr;
 }
+.bento-contact {
+  gap: 5vh;
+  padding: 40px;
+  padding-bottom: 120px; /* více místa dole kvůli nav menu */
+}
+
+.box.formular {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+  height: 100%;
+  box-sizing: border-box;
+}
 
 .form-title {
   color: #ff00ee;
-  margin-bottom: 20px;
+  font-size: 2.369rem;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  height: 100%;
+  margin-top: -40px;
 }
 
 .contact-form {
+  flex: 1 1 50%;
+  max-width: 480px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 50%;
-  position: relative;
-  z-index: 10;
+  gap: 22px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+.satelit-img {
+  flex: 0 0 auto;
+  max-width: 500px;
+  height: auto;
+  margin-right: -80px;
+  align-self: flex-start;
+  transform: translateY(-50px);
 }
 
 .contact-form input,
@@ -492,24 +349,21 @@ p {
 .submit-btn:hover {
   background-color: #ff00ee;
 }
-
-.satelit-img {
-  position: absolute;
-  right: 10px;
-  top: 100px;
-  width: 50%;
-}
-.mojefoto h2 {
+*/ .mojefoto h2 {
   color: #ff00ee;
+  margin: 0 0 10px 0;
 }
 .mojefoto h3 {
   color: #fefefe;
+  margin: 0 0 30px 0;
 }
 .mojefoto h4 {
   color: #ff00ee;
+  margin: 20px 0;
 }
 .mojefoto p {
   color: #7ae7c7;
+  margin: 20px 0;
 }
 .bento-about {
   display: grid;
@@ -565,18 +419,47 @@ p {
   color: #fefefe;
 }
 
-@media (max-width: 900px) {
-  .bento-about {
-    grid-template-columns: 1fr 1fr;
-  }
+.socialni-site img {
+  width: 20%;
+}
+.socialni-site {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+}
+.kontakt-logo img {
+  width: 50%;
+  height: auto;
+  margin: 0;
+}
+.kontakt-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.mojefoto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* text nahoře, fotka dole */
+  padding: 60px 50px; /* více prostoru kolem textu */
+  min-height: auto; /* odstraní fixní min-height, ať se přizpůsobí */
 }
 
-@media (max-width: 600px) {
-  .bento-about {
-    grid-template-columns: 1fr;
-  }
-
-  .box img {
-    width: 90%;
-  }
+.mojefoto img {
+  width: 80%; /* větší, aby byla dominantní, ale celá vidět */
+  max-width: 450px; /* max velikost, ať není obří */
+  border-radius: 30px;
+  align-self: flex-end;
+  margin-top: 40px; /* odstup od textu */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  object-fit: cover; /* zajistí, že fotka není deformovaná, ale celá vidět */
+  height: auto;
+}
+html.smooth-scroll {
+  scroll-behavior: smooth;
 }
