@@ -106,7 +106,7 @@ p {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 5vh;
-  height: 100vh; /* automatická výška podle obsahu */
+  height: 100vh;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -145,7 +145,6 @@ p {
   z-index: 10;
 }
 
-/* Kontejner pro obrázky */
 .images-container {
   position: relative;
   width: 100%;
@@ -153,7 +152,6 @@ p {
   min-height: 500px;
 }
 
-/* Společné styly obrázků */
 .images-container img {
   position: absolute;
   border-radius: 24px;
@@ -161,7 +159,6 @@ p {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
-/* ========== LEPORELO (prace1) ========== */
 .prace1 .images-container img.img-1 {
   width: 60%;
   top: 2%;
@@ -183,14 +180,12 @@ p {
   z-index: 1;
 }
 
-/* ========== LOGO (prace2) ========== */
-¨¨ .prace2 .images-container img.startup-logo {
-  width: 10%;
+.prace2 .images-container img {
+  width: 80%;
   top: 15%;
-  left: 0%;
+  left: 10%;
 }
 
-/* ========== BLUDIŠTĚ (prace3) ========== */
 .prace3 .images-container img.img-a {
   width: 50%;
   top: 0%;
@@ -212,6 +207,100 @@ p {
   text-align: right;
 }
 
+.bento-about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5vh;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.about1 h4,
+.about3 h4,
+.about5 h4 {
+  color: #ff00ee;
+  margin-bottom: 0;
+}
+
+.about2 h4,
+.about4 h4,
+.about6 h4 {
+  color: #fefefe;
+  margin-bottom: 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+  background: transparent;
+  position: relative;
+  height: 100%;
+}
+
+.box p,
+.box.ux1,
+.box.ux2,
+.box.p1,
+.box.p2 {
+  text-align: left;
+  line-height: 1.4;
+}
+
+.box img {
+  width: 70%;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.socialni-site img {
+  width: 20%;
+}
+.socialni-site {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+}
+.kontakt-logo img {
+  width: 50%;
+  height: auto;
+  margin: 0;
+}
+.kontakt-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.mojefoto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px 50px;
+  min-height: auto;
+}
+.mojefoto img {
+  width: 80%;
+  max-width: 450px;
+  border-radius: 30px;
+  align-self: center;
+  margin-top: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
 .bento-contact {
   /*display: grid;
   grid-template-columns: 1fr 1fr 0.5fr;
@@ -254,10 +343,34 @@ p {
   grid-column: 3;
   min-width: 1fr;
 }
+.mojefoto h2 {
+  color: #ff00ee;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.mojefoto h3 {
+  color: #fefefe;
+  margin: 0px;
+}
+.mojefoto h4 {
+  color: #ff00ee;
+  align-self: end;
+  justify-content: end;
+  margin-right: 35px;
+}
+.mojefoto p {
+  color: #7ae7c7;
+  margin: 0px;
+}
+.telmail {
+  align-self: end;
+  justify-content: end;
+  margin-bottom: 0px;
+}
 .bento-contact {
   gap: 5vh;
   padding: 40px;
-  padding-bottom: 120px; /* více místa dole kvůli nav menu */
+  padding-bottom: 120px;
 }
 
 .box.formular {
@@ -349,118 +462,24 @@ p {
 .submit-btn:hover {
   background-color: #ff00ee;
 }
-*/ .mojefoto h2 {
-  color: #ff00ee;
-  margin: 0 0 10px 0;
-}
-.mojefoto h3 {
-  color: #fefefe;
-  margin: 0 0 30px 0;
-}
-.mojefoto h4 {
-  color: #ff00ee;
-  margin: 20px 0;
-}
-.mojefoto p {
-  color: #7ae7c7;
-  margin: 20px 0;
-}
-.bento-about {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 5vh;
-  height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-}
 
-.box {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 10px;
-  box-sizing: border-box;
-  background: transparent;
-  position: relative;
-  height: 100%;
+.about1 img {
+  margin-top: -40px;
 }
-
-.box h4 {
-  margin: 15px 0 10px 15px;
+.about2 img {
+  margin-top: -80px;
 }
-
-.box p,
-.box .ux1,
-.box .ux2,
-.box .p1,
-.box .p2 {
-  margin: 10px 15px;
-  text-align: left;
-  line-height: 1.4;
+.about3 img {
+  margin-top: -50px;
 }
-
-.box img {
-  width: 70%;
-  align-self: flex-end;
-  margin-top: auto;
+.about4 img {
+  margin-top: -50px;
 }
-
-.about1 h4,
-.about3 h4,
-.about5 h4 {
-  color: #ff00ee;
+.about5 img {
+  margin-top: -20px;
+  min-width: 90%;
 }
-
-.about2 h4,
-.about4 h4,
-.about6 h4 {
-  color: #fefefe;
-}
-
-.socialni-site img {
-  width: 20%;
-}
-.socialni-site {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: space-around;
-  justify-content: space-around;
-}
-.kontakt-logo img {
-  width: 50%;
-  height: auto;
-  margin: 0;
-}
-.kontakt-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  flex-wrap: wrap;
-  align-content: center;
-}
-.mojefoto {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* text nahoře, fotka dole */
-  padding: 60px 50px; /* více prostoru kolem textu */
-  min-height: auto; /* odstraní fixní min-height, ať se přizpůsobí */
-}
-
-.mojefoto img {
-  width: 80%; /* větší, aby byla dominantní, ale celá vidět */
-  max-width: 450px; /* max velikost, ať není obří */
-  border-radius: 30px;
-  align-self: flex-end;
-  margin-top: 40px; /* odstup od textu */
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-  object-fit: cover; /* zajistí, že fotka není deformovaná, ale celá vidět */
-  height: auto;
-}
-html,
-body {
-  scroll-behavior: smooth;
+.about6 img {
+  margin-top: -40px;
+  min-width: 90%;
 }
