@@ -175,7 +175,7 @@ p {
 
 .prace1 .images-container img.img-3 {
   width: 70%;
-  bottom: -35%;
+  bottom: -30%;
   right: 0%;
   z-index: 1;
 }
@@ -201,7 +201,7 @@ p {
 }
 .prace3 .project-title {
   position: absolute;
-  bottom: 5%;
+  bottom: 0%;
   right: 5%;
   z-index: 10;
   text-align: right;
@@ -258,9 +258,6 @@ p {
   margin-top: auto;
 }
 
-.socialni-site img {
-  width: 20%;
-}
 .socialni-site {
   display: flex;
   flex-direction: row;
@@ -269,7 +266,7 @@ p {
   justify-content: space-around;
 }
 .kontakt-logo img {
-  width: 50%;
+  width: 40%;
   height: auto;
   margin: 0;
 }
@@ -482,4 +479,147 @@ body {
 .about6 img {
   margin-top: -40px;
   min-width: 90%;
+}
+.button-insta {
+  display: inline-block;
+}
+.socialni-site img {
+  width: 100%;
+  padding: 0px;
+}
+
+.ozvete-se {
+  margin-bottom: 4px;
+}
+.button-insta {
+  border: 5px solid transparent;
+  border-radius: 33px;
+  transition: border 0.2 ease;
+}
+.button-insta:hover {
+  border: 5px solid #ff00ee;
+}
+
+.button-linkedin {
+  border: 5px solid transparent;
+  border-radius: 8px;
+  transition: border 0.2 ease;
+}
+.button-linkedin:hover {
+  border: 5px solid #ff00ee;
+}
+.button-cv {
+  border: 5px solid transparent;
+  border-radius: 34px;
+  transition: border 0.2 ease;
+}
+.button-cv:hover {
+  border: 5px solid #ff00ee;
+}
+
+@media (max-width: 767px) {
+  .hero_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 20px;
+  }
+
+  .logo1 {
+    max-width: 100px;
+    margin: 0 auto;
+  }
+
+  .satelit {
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .hero_title {
+    margin: 1rem 0;
+  }
+
+  .cta {
+    margin: 1rem 0;
+    padding: 15px 25px;
+  }
+}
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3.2rem);
+}
+h2 {
+  font-size: clamp(1.2rem, 4vw, 2.4rem);
+}
+h3 {
+  font-size: clamp(1rem, 3vw, 1.8rem);
+}
+h4 {
+  font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+}
+p {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+@media (max-width: 767px) {
+  .form-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .socialni-site {
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .mojefoto img {
+    max-width: 80%;
+    margin: 1rem auto 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .bento-contact {
+    display: grid;
+    grid-template-columns: 1fr; /* jen jeden sloupec */
+    grid-auto-rows: auto;
+    gap: 1.5rem;
+    height: auto;
+  }
+
+  /* Odstraníme všechny staré grid-řádky a grid-sloupce */
+  .bento-contact .mojefoto,
+  .bento-contact .formular,
+  .bento-contact .socialni-site,
+  .bento-contact .kontakt-logo {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: 100%;
+  }
+
+  /* Přizpůsobení obrázků */
+  .bento-contact img {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    height: auto;
+  }
+
+  /* Formulář a sociální sítě se seskupí pod sebe */
+  .form-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .socialni-site {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
