@@ -460,6 +460,7 @@ p {
   object-fit: cover; /* zajistí, že fotka není deformovaná, ale celá vidět */
   height: auto;
 }
-html.smooth-scroll {
+html,
+body {
   scroll-behavior: smooth;
 }
